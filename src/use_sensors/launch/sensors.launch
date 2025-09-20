@@ -4,8 +4,11 @@
 	<arg name="use_camera" default="false" />
 	<arg name="use_radar" default="false" />
 	<arg name="use_lidar" default="false" />
-	<arg name="radar_model" default="1843" />
+	<arg name="radar_cfg" default="" />
 	<arg name="lidar_model" default="Pandar40P" />
+	<arg name="lidar_correction_file" default="" />
+	<arg name="lidar_ip" deafult="192.168.1.201" />
+	<arg name="camera_config" default="" />
 
 	<!-- Transform each sensor's coordinate frame into world coordinate frame -->
 	<arg name="fixed_frame" default="base_link" />
@@ -16,14 +19,18 @@
 
 	<include if="$(arg use_camera)" file="$(find usb_cam)/launch/usb_cam.launch">
 		<arg name="show_image_view" value="$(arg show_image_view)" />
+		<arg name="camera_yaml" value="$(arg camera_config)" />
 	</include>
 
-	<include if="$(arg use_radar)" file="$(find ti_mmwave_rospkg)/launch/$(arg radar_model)_multi_3d_0.launch">
+	<include if="$(arg use_radar)" file="$(find ti_mmwave_rospkg)/launch/radar.launch">
+		<arg name="radar_cfg" value="$(arg radar_cfg)" />
 	</include>
 
 	<include if="$(arg use_lidar)" file="$(find hesai_lidar)/launch/hesai_lidar.launch">
 		<arg name="lidar_type" value="$(arg lidar_model)" />
 		<arg name="frame_id" value="$(arg lidar_model)" />
+		<arg name="lidar_correction_file" value="$(arg lidar_correction_file)" />
+		<arg name="server_ip" value="$(arg lidar_ip)" />
 	</include>
 
 

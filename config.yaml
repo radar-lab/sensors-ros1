@@ -1,7 +1,21 @@
-use_sensors:
-    camera: true
-    radar: false
-    lidar: false
+# Configuration file for camera, radar, and lidar
+use:
+    camera: 
+        enabled: true
+        config: './camera_config.yaml'
+    lidar: 
+        enabled: false
+        correction_csv: './lidar_correction.csv'
+        ip: '192.168.1.201'
+    radar: 
+        enabled: false
+        cfg_file: './radar_config.cfg'
 
-record: false
-rviz: true
+show:
+    rviz: true
+    image_view: false
+
+record:
+    enabled: true
+    output_dir: '/ssd/rosbags' # Use full path (e.g. /home/user/Documents not ~/Documents)
+    raw_camera: false
