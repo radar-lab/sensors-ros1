@@ -1,0 +1,9 @@
+# Build files
+build/
+devel/
+logs/
+
+# cache
+CMakeCache.txt
+CMakeFiles/
+
