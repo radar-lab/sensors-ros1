@@ -63,6 +63,13 @@
 /home/caos/sensors_ws/build/serial/tests/CMakeFiles/serial-test-timer.dir
 /home/caos/sensors_ws/build/serial/tests/CMakeFiles/install/strip.dir
 /home/caos/sensors_ws/build/serial/tests/CMakeFiles/run_tests_serial_gtest_serial-test-timer.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/install/strip.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/install/local.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/install.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/list_install_components.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/rebuild_cache.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/edit_cache.dir
+/home/caos/sensors_ws/build/use_sensors/CMakeFiles/test.dir
 /home/caos/sensors_ws/build/ti_mmwave_rospkg/CMakeFiles/install/strip.dir
 /home/caos/sensors_ws/build/ti_mmwave_rospkg/CMakeFiles/install.dir
 /home/caos/sensors_ws/build/ti_mmwave_rospkg/CMakeFiles/list_install_components.dir

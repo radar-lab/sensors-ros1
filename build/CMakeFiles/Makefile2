@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: serial/all
+all: use_sensors/all
 all: ti_mmwave_rospkg/all
 all: ti_mmwave_tracker_rospkg/all
 all: HesaiLidar_General_ROS/all
@@ -65,6 +66,7 @@ all: usb_cam/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: serial/preinstall
+preinstall: use_sensors/preinstall
 preinstall: ti_mmwave_rospkg/preinstall
 preinstall: ti_mmwave_tracker_rospkg/preinstall
 preinstall: HesaiLidar_General_ROS/preinstall
@@ -80,6 +82,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: serial/clean
+clean: use_sensors/clean
 clean: ti_mmwave_rospkg/clean
 clean: ti_mmwave_tracker_rospkg/clean
 clean: HesaiLidar_General_ROS/clean
@@ -395,6 +398,24 @@ usb_cam/clean: usb_cam/CMakeFiles/v4l_driver.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/usb_cam_node.dir/clean
 
 .PHONY : usb_cam/clean
+
+#=============================================================================
+# Directory level rules for directory use_sensors
+
+# Recursive "all" directory target.
+use_sensors/all:
+
+.PHONY : use_sensors/all
+
+# Recursive "preinstall" directory target.
+use_sensors/preinstall:
+
+.PHONY : use_sensors/preinstall
+
+# Recursive "clean" directory target.
+use_sensors/clean:
+
+.PHONY : use_sensors/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir

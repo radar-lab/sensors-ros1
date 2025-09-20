@@ -974,6 +974,12 @@ usb_cam_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libcv_bridge.so;general;/
 //Value Computed by CMake
 usb_cam_SOURCE_DIR:STATIC=/home/caos/sensors_ws/src/usb_cam
 
+//Value Computed by CMake
+use_sensors_BINARY_DIR:STATIC=/home/caos/sensors_ws/build/use_sensors
+
+//Value Computed by CMake
+use_sensors_SOURCE_DIR:STATIC=/home/caos/sensors_ws/src/use_sensors
+
 //Dependencies for the target
 v4l_driver_LIB_DEPENDS:STATIC=general;v4l2;general;avcodec;general;avutil;general;swscale;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;
 
@@ -1156,7 +1162,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

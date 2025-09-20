@@ -147,6 +147,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/caos/sensors_ws/build/gtest/cmake_install.cmake")
   include("/home/caos/sensors_ws/build/serial/cmake_install.cmake")
+  include("/home/caos/sensors_ws/build/use_sensors/cmake_install.cmake")
   include("/home/caos/sensors_ws/build/ti_mmwave_rospkg/cmake_install.cmake")
   include("/home/caos/sensors_ws/build/ti_mmwave_tracker_rospkg/cmake_install.cmake")
   include("/home/caos/sensors_ws/build/HesaiLidar_General_ROS/cmake_install.cmake")

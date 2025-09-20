@@ -1,0 +1,7 @@
+use_sensors:
+    camera: true
+    radar: false
+    lidar: false
+
+record: false
+rviz: true

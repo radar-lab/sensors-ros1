@@ -1,0 +1,8 @@
+prefix=/home/caos/sensors_ws/devel
+
+Name: use_sensors
+Description: Description of use_sensors
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
