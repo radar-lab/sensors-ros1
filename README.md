@@ -1,6 +1,6 @@
 # ROS 1 Package for Hesai Lidar, TI mmWave Radar, and USB Camera
 
-This ROS 1 package allows for simulatneous data visualization and recording of camera, lidar, and radar data for sensor fusion.
+This ROS 1 package allows for simultaneous data visualization and recording of camera, lidar, and radar data for sensor fusion.
 
 This has been tested on ROS 1 Noetic on the Nvidia Jetson Xavier AGX with Hesai Pandar40P and TI AWR1843. This package uses the official Hesai and TI packages for ROS 1.
 
