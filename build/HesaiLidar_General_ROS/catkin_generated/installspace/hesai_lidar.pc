@@ -1,4 +1,4 @@
-prefix=/home/caos/sensors_ws/install
+prefix=/home/caos/sensors_ros1/install
 
 Name: hesai_lidar
 Description: Description of hesai_lidar

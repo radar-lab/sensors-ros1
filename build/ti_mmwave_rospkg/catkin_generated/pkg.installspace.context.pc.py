@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "nodelet;roscpp;serial;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lmmwave".split(';') if "-lmmwave" != "" else []
 PROJECT_NAME = "ti_mmwave_rospkg"
-PROJECT_SPACE_DIR = "/home/caos/sensors_ws/install"
+PROJECT_SPACE_DIR = "/home/caos/sensors_ros1/install"
 PROJECT_VERSION = "3.3.0"

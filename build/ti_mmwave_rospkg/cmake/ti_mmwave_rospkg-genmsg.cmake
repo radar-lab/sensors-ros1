@@ -2,7 +2,7 @@
 
 message(STATUS "ti_mmwave_rospkg: 2 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iti_mmwave_rospkg:/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iti_mmwave_rospkg:/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(ti_mmwave_rospkg_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" ""
 )
 
 #
@@ -39,13 +39,13 @@ add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ti_mmwave_rospkg
 )
 _generate_msg_cpp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ti_mmwave_rospkg
@@ -53,7 +53,7 @@ _generate_msg_cpp(ti_mmwave_rospkg
 
 ### Generating Services
 _generate_srv_cpp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ti_mmwave_rospkg
@@ -71,11 +71,11 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_cpp
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,13 +88,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ti_mmwave_rospkg
 )
 _generate_msg_eus(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ti_mmwave_rospkg
@@ -102,7 +102,7 @@ _generate_msg_eus(ti_mmwave_rospkg
 
 ### Generating Services
 _generate_srv_eus(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ti_mmwave_rospkg
@@ -120,11 +120,11 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_eus
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,13 +137,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ti_mmwave_rospkg
 )
 _generate_msg_lisp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ti_mmwave_rospkg
@@ -151,7 +151,7 @@ _generate_msg_lisp(ti_mmwave_rospkg
 
 ### Generating Services
 _generate_srv_lisp(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ti_mmwave_rospkg
@@ -169,11 +169,11 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_lisp
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,13 +186,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ti_mmwave_rospkg
 )
 _generate_msg_nodejs(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ti_mmwave_rospkg
@@ -200,7 +200,7 @@ _generate_msg_nodejs(ti_mmwave_rospkg
 
 ### Generating Services
 _generate_srv_nodejs(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ti_mmwave_rospkg
@@ -218,11 +218,11 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_nodejs
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,13 +235,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg
 )
 _generate_msg_py(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg
@@ -249,7 +249,7 @@ _generate_msg_py(ti_mmwave_rospkg
 
 ### Generating Services
 _generate_srv_py(ti_mmwave_rospkg
-  "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
+  "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg
@@ -267,11 +267,11 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_py
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/msg/RadarOccupancy.msg" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

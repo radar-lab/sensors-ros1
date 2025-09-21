@@ -1,4 +1,4 @@
-prefix=/home/caos/sensors_ws/devel
+prefix=/home/caos/sensors_ros1/devel
 
 Name: use_sensors
 Description: Description of use_sensors

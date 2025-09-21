@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_rospkg/msg/RadarOccupancy.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_rospkg/msg/RadarScan.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_rospkg/srv/mmWaveCLI.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_rospkg/msg/RadarOccupancy.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_rospkg/msg/RadarScan.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_rospkg/srv/mmWaveCLI.lisp"
   "CMakeFiles/ti_mmwave_rospkg_generate_messages_lisp"
 )
 

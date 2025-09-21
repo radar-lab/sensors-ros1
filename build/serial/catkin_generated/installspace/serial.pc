@@ -1,4 +1,4 @@
-prefix=/home/caos/sensors_ws/install
+prefix=/home/caos/sensors_ros1/install
 
 Name: serial
 Description: Description of serial

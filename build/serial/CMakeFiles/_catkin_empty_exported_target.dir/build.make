@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ serial/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_exporte
 .PHONY : serial/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 serial/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/caos/sensors_ws/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : serial/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 serial/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/serial /home/caos/sensors_ws/build /home/caos/sensors_ws/build/serial /home/caos/sensors_ws/build/serial/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/serial /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/serial /home/caos/sensors_ros1/build/serial/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

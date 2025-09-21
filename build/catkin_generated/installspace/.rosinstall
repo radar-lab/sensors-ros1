@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/caos/sensors_ws/install/setup.sh
+    local-name: /home/caos/sensors_ros1/install/setup.sh

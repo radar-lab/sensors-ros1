@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/libserial.pdb"
-  "/home/caos/sensors_ws/devel/lib/libserial.so"
+  "/home/caos/sensors_ros1/devel/lib/libserial.pdb"
+  "/home/caos/sensors_ros1/devel/lib/libserial.so"
   "CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o"
   "CMakeFiles/serial.dir/src/impl/unix.cc.o"
   "CMakeFiles/serial.dir/src/serial.cc.o"

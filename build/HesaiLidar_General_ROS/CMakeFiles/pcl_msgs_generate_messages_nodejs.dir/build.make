@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Utility rule file for pcl_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build: p
 .PHONY : HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
 
 HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/caos/sensors_ws/build/HesaiLidar_General_ROS && $(CMAKE_COMMAND) -P CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/HesaiLidar_General_ROS && $(CMAKE_COMMAND) -P CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/clean
 
 HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/HesaiLidar_General_ROS /home/caos/sensors_ws/build /home/caos/sensors_ws/build/HesaiLidar_General_ROS /home/caos/sensors_ws/build/HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/HesaiLidar_General_ROS /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/HesaiLidar_General_ROS /home/caos/sensors_ros1/build/HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : HesaiLidar_General_ROS/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/depend
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/tcp_command_client.c
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/tcp_command_client.c
 arpa/inet.h
 -
 errno.h
@@ -48,13 +48,13 @@ net/if.h
 sys/ioctl.h
 -
 src/util.h
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/util.h
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/util.h
 src/tcp_command_client.h
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/tcp_command_client.h
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/tcp_command_client.h
 
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/tcp_command_client.h
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/tcp_command_client.h
 
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/util.c
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/util.c
 arpa/inet.h
 -
 errno.h
@@ -92,7 +92,7 @@ syslog.h
 unistd.h
 -
 src/util.h
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/util.h
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/src/util.h
 
-/home/caos/sensors_ws/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/util.h
+/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/src/HesaiLidar_General_SDK/src/util.h
 

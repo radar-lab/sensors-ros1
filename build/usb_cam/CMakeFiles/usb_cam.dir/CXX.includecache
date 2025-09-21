@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/camera_driver.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/camera_driver.h
 string
 -
 iostream
@@ -40,17 +40,17 @@ sys/stat.h
 opencv2/imgproc.hpp
 -
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 usb_cam/util.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/util.h
 usb_cam/converters.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/converters.h
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/converters.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/types.h
 vector
 -
 string
@@ -86,11 +86,11 @@ sys/time.h
 opencv2/imgproc.hpp
 -
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam.h
 ros/forwards.h
 -
 usb_cam/camera_driver.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/camera_driver.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/camera_driver.h
 ros/ros.h
 -
 sensor_msgs/Image.h
@@ -104,11 +104,11 @@ std_srvs/Empty.h
 std_srvs/Trigger.h
 -
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/util.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam.cpp
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam.cpp
 linux/videodev2.h
 -
 ros/ros.h
@@ -122,9 +122,9 @@ string
 vector
 -
 ros/service_server.h
-/home/caos/sensors_ws/src/usb_cam/src/ros/service_server.h
+/home/caos/sensors_ros1/src/usb_cam/src/ros/service_server.h
 usb_cam/usb_cam.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/usb_cam.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/usb_cam.h
 
 /opt/ros/noetic/include/camera_info_manager/camera_info_manager.h
 ros/ros.h

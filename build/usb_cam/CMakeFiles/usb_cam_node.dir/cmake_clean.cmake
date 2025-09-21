@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/usb_cam/usb_cam_node"
-  "/home/caos/sensors_ws/devel/lib/usb_cam/usb_cam_node.pdb"
+  "/home/caos/sensors_ros1/devel/lib/usb_cam/usb_cam_node"
+  "/home/caos/sensors_ros1/devel/lib/usb_cam/usb_cam_node.pdb"
   "CMakeFiles/usb_cam_node.dir/src/usb_cam_node.cpp.o"
 )
 

@@ -67,14 +67,14 @@ set(hesai_lidar_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hesai_lidar_SOURCE_PREFIX /home/caos/sensors_ws/src/HesaiLidar_General_ROS)
-  set(hesai_lidar_DEVEL_PREFIX /home/caos/sensors_ws/devel)
+  set(hesai_lidar_SOURCE_PREFIX /home/caos/sensors_ros1/src/HesaiLidar_General_ROS)
+  set(hesai_lidar_DEVEL_PREFIX /home/caos/sensors_ros1/devel)
   set(hesai_lidar_INSTALL_PREFIX "")
   set(hesai_lidar_PREFIX ${hesai_lidar_DEVEL_PREFIX})
 else()
   set(hesai_lidar_SOURCE_PREFIX "")
   set(hesai_lidar_DEVEL_PREFIX "")
-  set(hesai_lidar_INSTALL_PREFIX /home/caos/sensors_ws/install)
+  set(hesai_lidar_INSTALL_PREFIX /home/caos/sensors_ros1/install)
   set(hesai_lidar_PREFIX ${hesai_lidar_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/caos/sensors_ws/install/lib;/home/caos/sensors_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/caos/sensors_ros1/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

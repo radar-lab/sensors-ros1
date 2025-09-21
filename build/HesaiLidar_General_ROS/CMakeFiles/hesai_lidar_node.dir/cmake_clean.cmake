@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/hesai_lidar/hesai_lidar_node"
-  "/home/caos/sensors_ws/devel/lib/hesai_lidar/hesai_lidar_node.pdb"
+  "/home/caos/sensors_ros1/devel/lib/hesai_lidar/hesai_lidar_node"
+  "/home/caos/sensors_ros1/devel/lib/hesai_lidar/hesai_lidar_node.pdb"
   "CMakeFiles/hesai_lidar_node.dir/src/main.cc.o"
 )
 

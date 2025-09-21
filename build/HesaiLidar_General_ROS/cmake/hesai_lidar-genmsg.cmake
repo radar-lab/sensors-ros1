@@ -2,7 +2,7 @@
 
 message(STATUS "hesai_lidar: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ihesai_lidar:/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ihesai_lidar:/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(hesai_lidar_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_custom_target(_hesai_lidar_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hesai_lidar" "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hesai_lidar" "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" ""
 )
 
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_custom_target(_hesai_lidar_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hesai_lidar" "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" "hesai_lidar/PandarPacket:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hesai_lidar" "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" "std_msgs/Header:hesai_lidar/PandarPacket"
 )
 
 #
@@ -34,15 +34,15 @@ add_custom_target(_hesai_lidar_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hesai_lidar
 )
 _generate_msg_cpp(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
   "${MSG_I_FLAGS}"
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hesai_lidar
 )
 
@@ -60,9 +60,9 @@ add_custom_target(hesai_lidar_generate_messages_cpp
 add_dependencies(hesai_lidar_generate_messages hesai_lidar_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_cpp _hesai_lidar_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_cpp _hesai_lidar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,15 +75,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS hesai_lidar_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hesai_lidar
 )
 _generate_msg_eus(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
   "${MSG_I_FLAGS}"
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hesai_lidar
 )
 
@@ -101,9 +101,9 @@ add_custom_target(hesai_lidar_generate_messages_eus
 add_dependencies(hesai_lidar_generate_messages hesai_lidar_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_eus _hesai_lidar_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_eus _hesai_lidar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,15 +116,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS hesai_lidar_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hesai_lidar
 )
 _generate_msg_lisp(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
   "${MSG_I_FLAGS}"
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hesai_lidar
 )
 
@@ -142,9 +142,9 @@ add_custom_target(hesai_lidar_generate_messages_lisp
 add_dependencies(hesai_lidar_generate_messages hesai_lidar_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_lisp _hesai_lidar_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_lisp _hesai_lidar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,15 +157,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS hesai_lidar_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hesai_lidar
 )
 _generate_msg_nodejs(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
   "${MSG_I_FLAGS}"
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hesai_lidar
 )
 
@@ -183,9 +183,9 @@ add_custom_target(hesai_lidar_generate_messages_nodejs
 add_dependencies(hesai_lidar_generate_messages hesai_lidar_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_nodejs _hesai_lidar_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_nodejs _hesai_lidar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,15 +198,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS hesai_lidar_generate_messages_nodej
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hesai_lidar
 )
 _generate_msg_py(hesai_lidar
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+  "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
   "${MSG_I_FLAGS}"
-  "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hesai_lidar
 )
 
@@ -224,9 +224,9 @@ add_custom_target(hesai_lidar_generate_messages_py
 add_dependencies(hesai_lidar_generate_messages hesai_lidar_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_py _hesai_lidar_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
+get_filename_component(_filename "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg" NAME_WE)
 add_dependencies(hesai_lidar_generate_messages_py _hesai_lidar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

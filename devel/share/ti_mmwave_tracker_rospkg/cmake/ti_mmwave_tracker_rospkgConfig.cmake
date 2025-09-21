@@ -67,14 +67,14 @@ set(ti_mmwave_tracker_rospkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ti_mmwave_tracker_rospkg_SOURCE_PREFIX /home/caos/sensors_ws/src/ti_mmwave_tracker_rospkg)
-  set(ti_mmwave_tracker_rospkg_DEVEL_PREFIX /home/caos/sensors_ws/devel)
+  set(ti_mmwave_tracker_rospkg_SOURCE_PREFIX /home/caos/sensors_ros1/src/ti_mmwave_tracker_rospkg)
+  set(ti_mmwave_tracker_rospkg_DEVEL_PREFIX /home/caos/sensors_ros1/devel)
   set(ti_mmwave_tracker_rospkg_INSTALL_PREFIX "")
   set(ti_mmwave_tracker_rospkg_PREFIX ${ti_mmwave_tracker_rospkg_DEVEL_PREFIX})
 else()
   set(ti_mmwave_tracker_rospkg_SOURCE_PREFIX "")
   set(ti_mmwave_tracker_rospkg_DEVEL_PREFIX "")
-  set(ti_mmwave_tracker_rospkg_INSTALL_PREFIX /home/caos/sensors_ws/install)
+  set(ti_mmwave_tracker_rospkg_INSTALL_PREFIX /home/caos/sensors_ros1/install)
   set(ti_mmwave_tracker_rospkg_PREFIX ${ti_mmwave_tracker_rospkg_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ti_mmwave_tracker_rospkg_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/caos/sensors_ws/devel/include;/home/caos/sensors_ws/src/ti_mmwave_tracker_rospkg/include " STREQUAL " ")
+if(NOT "/home/caos/sensors_ros1/devel/include;/home/caos/sensors_ros1/src/ti_mmwave_tracker_rospkg/include " STREQUAL " ")
   set(ti_mmwave_tracker_rospkg_INCLUDE_DIRS "")
-  set(_include_dirs "/home/caos/sensors_ws/devel/include;/home/caos/sensors_ws/src/ti_mmwave_tracker_rospkg/include")
+  set(_include_dirs "/home/caos/sensors_ros1/devel/include;/home/caos/sensors_ros1/src/ti_mmwave_tracker_rospkg/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/radar-lab/ti_mmwave_rospkg, https://bitbucket.itg.ti.com/scm/mmwave_apps/ros_multisensor_demo/ti_mmwave_rospkg " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/caos/sensors_ws/devel/include;/home/caos/sensors_ws/src/ti_mmwave_
         message(FATAL_ERROR "Project 'ti_mmwave_tracker_rospkg' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ti_mmwave_tracker_rospkg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/caos/sensors_ws/src/ti_mmwave_tracker_rospkg/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ti_mmwave_tracker_rospkg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/caos/sensors_ros1/src/ti_mmwave_tracker_rospkg/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ti_mmwave_tracker_rospkg_INCLUDE_DIRS ${include})
   endforeach()
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/caos/sensors_ws/devel/lib;/home/caos/sensors_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/caos/sensors_ros1/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

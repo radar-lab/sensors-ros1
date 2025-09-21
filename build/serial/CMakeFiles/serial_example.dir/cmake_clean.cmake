@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/serial/serial_example"
-  "/home/caos/sensors_ws/devel/lib/serial/serial_example.pdb"
+  "/home/caos/sensors_ros1/devel/lib/serial/serial_example"
+  "/home/caos/sensors_ros1/devel/lib/serial/serial_example.pdb"
   "CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
 )
 

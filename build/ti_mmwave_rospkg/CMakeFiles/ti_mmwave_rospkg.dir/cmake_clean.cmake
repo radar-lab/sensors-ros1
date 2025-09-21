@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg"
-  "/home/caos/sensors_ws/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg.pdb"
+  "/home/caos/sensors_ros1/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg"
+  "/home/caos/sensors_ros1/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg.pdb"
   "CMakeFiles/ti_mmwave_rospkg.dir/src/mmWaveLoader.cpp.o"
 )
 

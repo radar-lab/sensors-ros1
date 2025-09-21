@@ -1,2 +1,2 @@
 HesaiLidar_General_ROS:serial:ti_mmwave_rospkg:ti_mmwave_tracker_rospkg:usb_cam:use_sensors
--DCATKIN_DEVEL_PREFIX=/home/caos/sensors_ws/devel -DCMAKE_INSTALL_PREFIX=/home/caos/sensors_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/caos/sensors_ros1/devel -DCMAKE_INSTALL_PREFIX=/home/caos/sensors_ros1/install -G Unix Makefiles

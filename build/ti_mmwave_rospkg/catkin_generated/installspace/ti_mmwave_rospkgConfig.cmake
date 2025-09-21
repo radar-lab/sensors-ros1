@@ -67,14 +67,14 @@ set(ti_mmwave_rospkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/caos/sensors_ws/src/ti_mmwave_rospkg)
-  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/caos/sensors_ws/devel)
+  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/caos/sensors_ros1/src/ti_mmwave_rospkg)
+  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/caos/sensors_ros1/devel)
   set(ti_mmwave_rospkg_INSTALL_PREFIX "")
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_DEVEL_PREFIX})
 else()
   set(ti_mmwave_rospkg_SOURCE_PREFIX "")
   set(ti_mmwave_rospkg_DEVEL_PREFIX "")
-  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/caos/sensors_ws/install)
+  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/caos/sensors_ros1/install)
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/caos/sensors_ws/install/lib;/home/caos/sensors_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/caos/sensors_ros1/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

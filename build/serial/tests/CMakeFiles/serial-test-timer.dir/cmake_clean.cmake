@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/serial/serial-test-timer"
-  "/home/caos/sensors_ws/devel/lib/serial/serial-test-timer.pdb"
+  "/home/caos/sensors_ros1/devel/lib/serial/serial-test-timer"
+  "/home/caos/sensors_ros1/devel/lib/serial/serial-test-timer.pdb"
   "CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
 )
 

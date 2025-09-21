@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Utility rule file for ti_mmwave_tracker_rospkg_genlisp.
 
@@ -63,10 +63,10 @@ ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/build: 
 .PHONY : ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/build
 
 ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/clean:
-	cd /home/caos/sensors_ws/build/ti_mmwave_tracker_rospkg && $(CMAKE_COMMAND) -P CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/ti_mmwave_tracker_rospkg && $(CMAKE_COMMAND) -P CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/cmake_clean.cmake
 .PHONY : ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/clean
 
 ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/ti_mmwave_tracker_rospkg /home/caos/sensors_ws/build /home/caos/sensors_ws/build/ti_mmwave_tracker_rospkg /home/caos/sensors_ws/build/ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/ti_mmwave_tracker_rospkg /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/ti_mmwave_tracker_rospkg /home/caos/sensors_ros1/build/ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ti_mmwave_tracker_rospkg/CMakeFiles/ti_mmwave_tracker_rospkg_genlisp.dir/depend
 

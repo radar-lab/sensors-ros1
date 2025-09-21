@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/mmWaveCLI.h
+/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/mmWaveCLI.h
 ros/service_traits.h
 -
 ti_mmwave_rospkg/mmWaveCLIRequest.h
@@ -14,7 +14,7 @@ ti_mmwave_rospkg/mmWaveCLIRequest.h
 ti_mmwave_rospkg/mmWaveCLIResponse.h
 -
 
-/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/mmWaveCLIRequest.h
+/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/mmWaveCLIRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/mmWaveCLIResponse.h
+/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/mmWaveCLIResponse.h
 string
 -
 vector
@@ -46,13 +46,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/include/ParameterParser.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/include/ParameterParser.h
 ros/ros.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/include/ros/ros.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/include/ros/ros.h
 std_msgs/String.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/include/std_msgs/String.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/include/std_msgs/String.h
 ti_mmwave_rospkg/mmWaveCLI.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/include/ti_mmwave_rospkg/mmWaveCLI.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/include/ti_mmwave_rospkg/mmWaveCLI.h
 nodelet/nodelet.h
 -
 pluginlib/class_list_macros.h
@@ -72,11 +72,11 @@ string
 vector
 -
 
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/src/mmWaveQuickConfig.cpp
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/src/mmWaveQuickConfig.cpp
 ros/ros.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/src/ros/ros.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/src/ros/ros.h
 ti_mmwave_rospkg/mmWaveCLI.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/src/ti_mmwave_rospkg/mmWaveCLI.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/src/ti_mmwave_rospkg/mmWaveCLI.h
 cstdlib
 -
 fstream
@@ -86,7 +86,7 @@ stdio.h
 regex
 -
 ParameterParser.h
-/home/caos/sensors_ws/src/ti_mmwave_rospkg/src/ParameterParser.h
+/home/caos/sensors_ros1/src/ti_mmwave_rospkg/src/ParameterParser.h
 
 /opt/ros/noetic/include/class_loader/class_loader.hpp
 boost/bind/bind.hpp

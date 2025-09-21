@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/manifest.l"
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarPointTrackID.l"
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarScan.l"
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackArray.l"
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackContents.l"
-  "/home/caos/sensors_ws/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/srv/mmWaveCLI.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/manifest.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarPointTrackID.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarScan.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackArray.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackContents.l"
+  "/home/caos/sensors_ros1/devel/share/roseus/ros/ti_mmwave_tracker_rospkg/srv/mmWaveCLI.l"
   "CMakeFiles/ti_mmwave_tracker_rospkg_generate_messages_eus"
 )
 

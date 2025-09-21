@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/caos/sensors_ws/build/CMakeFiles /home/caos/sensors_ws/build/serial/CMakeFiles/progress.marks
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/caos/sensors_ws/build/CMakeFiles 0
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/caos/sensors_ros1/build/CMakeFiles /home/caos/sensors_ros1/build/serial/CMakeFiles/progress.marks
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/caos/sensors_ros1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/clean
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/preinstall
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/preinstall
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 serial/CMakeFiles/serial.dir/rule:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/serial.dir/rule
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/serial.dir/rule
 .PHONY : serial/CMakeFiles/serial.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ serial: serial/CMakeFiles/serial.dir/rule
 
 # fast build rule for target.
 serial/fast:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/build
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/build
 .PHONY : serial/fast
 
 # Convenience name for target.
 serial/CMakeFiles/serial_example.dir/rule:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/serial_example.dir/rule
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/serial_example.dir/rule
 .PHONY : serial/CMakeFiles/serial_example.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ serial_example: serial/CMakeFiles/serial_example.dir/rule
 
 # fast build rule for target.
 serial_example/fast:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/build
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/build
 .PHONY : serial_example/fast
 
 # Convenience name for target.
 serial/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ _catkin_empty_exported_target: serial/CMakeFiles/_catkin_empty_exported_target.d
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/_catkin_empty_exported_target.dir/build.make serial/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/_catkin_empty_exported_target.dir/build.make serial/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 examples/serial_example.o: examples/serial_example.cc.o
@@ -218,7 +218,7 @@ examples/serial_example.o: examples/serial_example.cc.o
 
 # target to build an object file
 examples/serial_example.cc.o:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
 .PHONY : examples/serial_example.cc.o
 
 examples/serial_example.i: examples/serial_example.cc.i
@@ -227,7 +227,7 @@ examples/serial_example.i: examples/serial_example.cc.i
 
 # target to preprocess a source file
 examples/serial_example.cc.i:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.i
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.i
 .PHONY : examples/serial_example.cc.i
 
 examples/serial_example.s: examples/serial_example.cc.s
@@ -236,7 +236,7 @@ examples/serial_example.s: examples/serial_example.cc.s
 
 # target to generate assembly for a file
 examples/serial_example.cc.s:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.s
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.s
 .PHONY : examples/serial_example.cc.s
 
 src/impl/list_ports/list_ports_linux.o: src/impl/list_ports/list_ports_linux.cc.o
@@ -245,7 +245,7 @@ src/impl/list_ports/list_ports_linux.o: src/impl/list_ports/list_ports_linux.cc.
 
 # target to build an object file
 src/impl/list_ports/list_ports_linux.cc.o:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o
 .PHONY : src/impl/list_ports/list_ports_linux.cc.o
 
 src/impl/list_ports/list_ports_linux.i: src/impl/list_ports/list_ports_linux.cc.i
@@ -254,7 +254,7 @@ src/impl/list_ports/list_ports_linux.i: src/impl/list_ports/list_ports_linux.cc.
 
 # target to preprocess a source file
 src/impl/list_ports/list_ports_linux.cc.i:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.i
 .PHONY : src/impl/list_ports/list_ports_linux.cc.i
 
 src/impl/list_ports/list_ports_linux.s: src/impl/list_ports/list_ports_linux.cc.s
@@ -263,7 +263,7 @@ src/impl/list_ports/list_ports_linux.s: src/impl/list_ports/list_ports_linux.cc.
 
 # target to generate assembly for a file
 src/impl/list_ports/list_ports_linux.cc.s:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.s
 .PHONY : src/impl/list_ports/list_ports_linux.cc.s
 
 src/impl/unix.o: src/impl/unix.cc.o
@@ -272,7 +272,7 @@ src/impl/unix.o: src/impl/unix.cc.o
 
 # target to build an object file
 src/impl/unix.cc.o:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.o
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.o
 .PHONY : src/impl/unix.cc.o
 
 src/impl/unix.i: src/impl/unix.cc.i
@@ -281,7 +281,7 @@ src/impl/unix.i: src/impl/unix.cc.i
 
 # target to preprocess a source file
 src/impl/unix.cc.i:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.i
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.i
 .PHONY : src/impl/unix.cc.i
 
 src/impl/unix.s: src/impl/unix.cc.s
@@ -290,7 +290,7 @@ src/impl/unix.s: src/impl/unix.cc.s
 
 # target to generate assembly for a file
 src/impl/unix.cc.s:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.s
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/impl/unix.cc.s
 .PHONY : src/impl/unix.cc.s
 
 src/serial.o: src/serial.cc.o
@@ -299,7 +299,7 @@ src/serial.o: src/serial.cc.o
 
 # target to build an object file
 src/serial.cc.o:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.o
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.o
 .PHONY : src/serial.cc.o
 
 src/serial.i: src/serial.cc.i
@@ -308,7 +308,7 @@ src/serial.i: src/serial.cc.i
 
 # target to preprocess a source file
 src/serial.cc.i:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.i
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.i
 .PHONY : src/serial.cc.i
 
 src/serial.s: src/serial.cc.s
@@ -317,7 +317,7 @@ src/serial.s: src/serial.cc.s
 
 # target to generate assembly for a file
 src/serial.cc.s:
-	cd /home/caos/sensors_ws/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.s
+	cd /home/caos/sensors_ros1/build && $(MAKE) -f serial/CMakeFiles/serial.dir/build.make serial/CMakeFiles/serial.dir/src/serial.cc.s
 .PHONY : src/serial.cc.s
 
 # Help Target
@@ -359,6 +359,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

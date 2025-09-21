@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Include any dependencies generated for this target.
 include serial/CMakeFiles/serial_example.dir/depend.make
@@ -58,17 +58,17 @@ include serial/CMakeFiles/serial_example.dir/progress.make
 include serial/CMakeFiles/serial_example.dir/flags.make
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: serial/CMakeFiles/serial_example.dir/flags.make
-serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/caos/sensors_ws/src/serial/examples/serial_example.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/caos/sensors_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
-	cd /home/caos/sensors_ws/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/caos/sensors_ws/src/serial/examples/serial_example.cc
+serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o: /home/caos/sensors_ros1/src/serial/examples/serial_example.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/caos/sensors_ros1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o"
+	cd /home/caos/sensors_ros1/build/serial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_example.dir/examples/serial_example.cc.o -c /home/caos/sensors_ros1/src/serial/examples/serial_example.cc
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_example.dir/examples/serial_example.cc.i"
-	cd /home/caos/sensors_ws/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/caos/sensors_ws/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
+	cd /home/caos/sensors_ros1/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/caos/sensors_ros1/src/serial/examples/serial_example.cc > CMakeFiles/serial_example.dir/examples/serial_example.cc.i
 
 serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_example.dir/examples/serial_example.cc.s"
-	cd /home/caos/sensors_ws/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/caos/sensors_ws/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
+	cd /home/caos/sensors_ros1/build/serial && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/caos/sensors_ros1/src/serial/examples/serial_example.cc -o CMakeFiles/serial_example.dir/examples/serial_example.cc.s
 
 # Object files for target serial_example
 serial_example_OBJECTS = \
@@ -77,23 +77,23 @@ serial_example_OBJECTS = \
 # External object files for target serial_example
 serial_example_EXTERNAL_OBJECTS =
 
-/home/caos/sensors_ws/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
-/home/caos/sensors_ws/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
-/home/caos/sensors_ws/devel/lib/serial/serial_example: /home/caos/sensors_ws/devel/lib/libserial.so
-/home/caos/sensors_ws/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/caos/sensors_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/caos/sensors_ws/devel/lib/serial/serial_example"
-	cd /home/caos/sensors_ws/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
+/home/caos/sensors_ros1/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/examples/serial_example.cc.o
+/home/caos/sensors_ros1/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/build.make
+/home/caos/sensors_ros1/devel/lib/serial/serial_example: /home/caos/sensors_ros1/devel/lib/libserial.so
+/home/caos/sensors_ros1/devel/lib/serial/serial_example: serial/CMakeFiles/serial_example.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/caos/sensors_ros1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/caos/sensors_ros1/devel/lib/serial/serial_example"
+	cd /home/caos/sensors_ros1/build/serial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_example.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-serial/CMakeFiles/serial_example.dir/build: /home/caos/sensors_ws/devel/lib/serial/serial_example
+serial/CMakeFiles/serial_example.dir/build: /home/caos/sensors_ros1/devel/lib/serial/serial_example
 
 .PHONY : serial/CMakeFiles/serial_example.dir/build
 
 serial/CMakeFiles/serial_example.dir/clean:
-	cd /home/caos/sensors_ws/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/serial && $(CMAKE_COMMAND) -P CMakeFiles/serial_example.dir/cmake_clean.cmake
 .PHONY : serial/CMakeFiles/serial_example.dir/clean
 
 serial/CMakeFiles/serial_example.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/serial /home/caos/sensors_ws/build /home/caos/sensors_ws/build/serial /home/caos/sensors_ws/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/serial /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/serial /home/caos/sensors_ros1/build/serial/CMakeFiles/serial_example.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/CMakeFiles/serial_example.dir/depend
 

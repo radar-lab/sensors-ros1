@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/camera_driver.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/camera_driver.h
 string
 -
 iostream
@@ -40,17 +40,17 @@ sys/stat.h
 opencv2/imgproc.hpp
 -
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 usb_cam/util.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/util.h
 usb_cam/converters.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/converters.h
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/converters.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/types.h
 vector
 -
 string
@@ -86,11 +86,11 @@ sys/time.h
 opencv2/imgproc.hpp
 -
 
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/util.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/include/usb_cam/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/include/usb_cam/usb_cam/types.h
 
-/home/caos/sensors_ws/src/usb_cam/src/camera_driver.cpp
+/home/caos/sensors_ros1/src/usb_cam/src/camera_driver.cpp
 cstdio
 -
 linux/videodev2.h
@@ -100,25 +100,25 @@ sstream
 string
 -
 usb_cam/camera_driver.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/camera_driver.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/camera_driver.h
 usb_cam/converters.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/converters.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/types.h
 
-/home/caos/sensors_ws/src/usb_cam/src/converters.cpp
+/home/caos/sensors_ros1/src/usb_cam/src/converters.cpp
 usb_cam/converters.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/converters.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/converters.h
 usb_cam/types.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/types.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/types.h
 usb_cam/util.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/util.h
 linux/videodev2.h
 -
 
-/home/caos/sensors_ws/src/usb_cam/src/util.cpp
+/home/caos/sensors_ros1/src/usb_cam/src/util.cpp
 usb_cam/util.h
-/home/caos/sensors_ws/src/usb_cam/src/usb_cam/util.h
+/home/caos/sensors_ros1/src/usb_cam/src/usb_cam/util.h
 
 /usr/include/opencv4/opencv2/core.hpp
 opencv2/core/cvdef.h

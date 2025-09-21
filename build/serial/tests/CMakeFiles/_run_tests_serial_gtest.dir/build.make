@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Utility rule file for _run_tests_serial_gtest.
 
@@ -63,10 +63,10 @@ serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build: _run_tests_serial_gte
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/build
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/clean:
-	cd /home/caos/sensors_ws/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/serial/tests && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_serial_gtest.dir/cmake_clean.cmake
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/clean
 
 serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/serial/tests /home/caos/sensors_ws/build /home/caos/sensors_ws/build/serial/tests /home/caos/sensors_ws/build/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/serial/tests /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/serial/tests /home/caos/sensors_ros1/build/serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial/tests/CMakeFiles/_run_tests_serial_gtest.dir/depend
 

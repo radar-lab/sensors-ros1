@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/libv4l_driver.pdb"
-  "/home/caos/sensors_ws/devel/lib/libv4l_driver.so"
+  "/home/caos/sensors_ros1/devel/lib/libv4l_driver.pdb"
+  "/home/caos/sensors_ros1/devel/lib/libv4l_driver.so"
   "CMakeFiles/v4l_driver.dir/src/camera_driver.cpp.o"
   "CMakeFiles/v4l_driver.dir/src/converters.cpp.o"
   "CMakeFiles/v4l_driver.dir/src/util.cpp.o"

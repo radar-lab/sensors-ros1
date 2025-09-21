@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/share/gennodejs/ros/ti_mmwave_rospkg/msg/RadarOccupancy.js"
-  "/home/caos/sensors_ws/devel/share/gennodejs/ros/ti_mmwave_rospkg/msg/RadarScan.js"
-  "/home/caos/sensors_ws/devel/share/gennodejs/ros/ti_mmwave_rospkg/srv/mmWaveCLI.js"
+  "/home/caos/sensors_ros1/devel/share/gennodejs/ros/ti_mmwave_rospkg/msg/RadarOccupancy.js"
+  "/home/caos/sensors_ros1/devel/share/gennodejs/ros/ti_mmwave_rospkg/msg/RadarScan.js"
+  "/home/caos/sensors_ros1/devel/share/gennodejs/ros/ti_mmwave_rospkg/srv/mmWaveCLI.js"
   "CMakeFiles/ti_mmwave_rospkg_generate_messages_nodejs"
 )
 

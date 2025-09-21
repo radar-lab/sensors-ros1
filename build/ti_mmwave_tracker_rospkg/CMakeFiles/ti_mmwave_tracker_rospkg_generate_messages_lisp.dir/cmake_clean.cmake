@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarPointTrackID.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarScan.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackArray.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackContents.lisp"
-  "/home/caos/sensors_ws/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/srv/mmWaveCLI.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarPointTrackID.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarScan.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackArray.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/msg/RadarTrackContents.lisp"
+  "/home/caos/sensors_ros1/devel/share/common-lisp/ros/ti_mmwave_tracker_rospkg/srv/mmWaveCLI.lisp"
   "CMakeFiles/ti_mmwave_tracker_rospkg_generate_messages_lisp"
 )
 

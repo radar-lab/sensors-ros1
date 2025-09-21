@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/caos/sensors_ws/src/usb_cam/src/camera_driver.cpp" "/home/caos/sensors_ws/build/usb_cam/CMakeFiles/v4l_driver.dir/src/camera_driver.cpp.o"
-  "/home/caos/sensors_ws/src/usb_cam/src/converters.cpp" "/home/caos/sensors_ws/build/usb_cam/CMakeFiles/v4l_driver.dir/src/converters.cpp.o"
-  "/home/caos/sensors_ws/src/usb_cam/src/util.cpp" "/home/caos/sensors_ws/build/usb_cam/CMakeFiles/v4l_driver.dir/src/util.cpp.o"
+  "/home/caos/sensors_ros1/src/usb_cam/src/camera_driver.cpp" "/home/caos/sensors_ros1/build/usb_cam/CMakeFiles/v4l_driver.dir/src/camera_driver.cpp.o"
+  "/home/caos/sensors_ros1/src/usb_cam/src/converters.cpp" "/home/caos/sensors_ros1/build/usb_cam/CMakeFiles/v4l_driver.dir/src/converters.cpp.o"
+  "/home/caos/sensors_ros1/src/usb_cam/src/util.cpp" "/home/caos/sensors_ros1/build/usb_cam/CMakeFiles/v4l_driver.dir/src/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,7 +21,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/caos/sensors_ws/src/usb_cam/include"
+  "/home/caos/sensors_ros1/src/usb_cam/include"
   "/usr/include/opencv4"
   )
 

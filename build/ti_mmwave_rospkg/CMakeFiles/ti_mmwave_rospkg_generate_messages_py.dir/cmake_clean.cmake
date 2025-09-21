@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/_RadarOccupancy.py"
-  "/home/caos/sensors_ws/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/_RadarScan.py"
-  "/home/caos/sensors_ws/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/__init__.py"
-  "/home/caos/sensors_ws/devel/lib/python3/dist-packages/ti_mmwave_rospkg/srv/__init__.py"
-  "/home/caos/sensors_ws/devel/lib/python3/dist-packages/ti_mmwave_rospkg/srv/_mmWaveCLI.py"
+  "/home/caos/sensors_ros1/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/_RadarOccupancy.py"
+  "/home/caos/sensors_ros1/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/_RadarScan.py"
+  "/home/caos/sensors_ros1/devel/lib/python3/dist-packages/ti_mmwave_rospkg/msg/__init__.py"
+  "/home/caos/sensors_ros1/devel/lib/python3/dist-packages/ti_mmwave_rospkg/srv/__init__.py"
+  "/home/caos/sensors_ros1/devel/lib/python3/dist-packages/ti_mmwave_rospkg/srv/_mmWaveCLI.py"
   "CMakeFiles/ti_mmwave_rospkg_generate_messages_py"
 )
 

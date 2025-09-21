@@ -1,11 +1,11 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
+messages_str = "/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarPacket.msg;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg/PandarScan.msg"
 services_str = ""
 pkg_name = "hesai_lidar"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
-dep_include_paths_str = "hesai_lidar;/home/caos/sensors_ws/src/HesaiLidar_General_ROS/msg;std_msgs;/opt/ros/noetic/share/std_msgs/cmake/../msg"
+dep_include_paths_str = "hesai_lidar;/home/caos/sensors_ros1/src/HesaiLidar_General_ROS/msg;std_msgs;/opt/ros/noetic/share/std_msgs/cmake/../msg"
 PYTHON_EXECUTABLE = "/usr/bin/python3"
 package_has_static_sources = '' == 'TRUE'
 genmsg_check_deps_script = "/opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py"

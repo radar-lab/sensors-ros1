@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/share/gennodejs/ros/hesai_lidar/msg/PandarPacket.js"
-  "/home/caos/sensors_ws/devel/share/gennodejs/ros/hesai_lidar/msg/PandarScan.js"
+  "/home/caos/sensors_ros1/devel/share/gennodejs/ros/hesai_lidar/msg/PandarPacket.js"
+  "/home/caos/sensors_ros1/devel/share/gennodejs/ros/hesai_lidar/msg/PandarScan.js"
   "CMakeFiles/hesai_lidar_generate_messages_nodejs"
 )
 

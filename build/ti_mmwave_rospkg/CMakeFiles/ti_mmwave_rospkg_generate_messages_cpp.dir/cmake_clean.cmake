@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/RadarOccupancy.h"
-  "/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/RadarScan.h"
-  "/home/caos/sensors_ws/devel/include/ti_mmwave_rospkg/mmWaveCLI.h"
+  "/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/RadarOccupancy.h"
+  "/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/RadarScan.h"
+  "/home/caos/sensors_ros1/devel/include/ti_mmwave_rospkg/mmWaveCLI.h"
   "CMakeFiles/ti_mmwave_rospkg_generate_messages_cpp"
 )
 

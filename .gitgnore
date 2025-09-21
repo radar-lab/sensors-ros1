@@ -2,8 +2,5 @@
 build/
 devel/
 logs/
-
-# cache
-CMakeCache.txt
-CMakeFiles/
+.catkin_workspace
 

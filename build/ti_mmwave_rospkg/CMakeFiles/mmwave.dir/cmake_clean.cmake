@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/caos/sensors_ws/devel/lib/libmmwave.pdb"
-  "/home/caos/sensors_ws/devel/lib/libmmwave.so"
+  "/home/caos/sensors_ros1/devel/lib/libmmwave.pdb"
+  "/home/caos/sensors_ros1/devel/lib/libmmwave.so"
   "CMakeFiles/mmwave.dir/src/DataHandlerClass.cpp.o"
   "CMakeFiles/mmwave.dir/src/ParameterParser.cpp.o"
   "CMakeFiles/mmwave.dir/src/mmWaveCommSrv.cpp.o"

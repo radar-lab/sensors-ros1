@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/caos/sensors_ws/src
+CMAKE_SOURCE_DIR = /home/caos/sensors_ros1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/caos/sensors_ws/build
+CMAKE_BINARY_DIR = /home/caos/sensors_ros1/build
 
 # Utility rule file for nodelet_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/build: nodelet_ge
 .PHONY : ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 
 ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
-	cd /home/caos/sensors_ws/build/ti_mmwave_rospkg && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/caos/sensors_ros1/build/ti_mmwave_rospkg && $(CMAKE_COMMAND) -P CMakeFiles/nodelet_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
 
 ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/depend:
-	cd /home/caos/sensors_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ws/src /home/caos/sensors_ws/src/ti_mmwave_rospkg /home/caos/sensors_ws/build /home/caos/sensors_ws/build/ti_mmwave_rospkg /home/caos/sensors_ws/build/ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/caos/sensors_ros1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/caos/sensors_ros1/src /home/caos/sensors_ros1/src/ti_mmwave_rospkg /home/caos/sensors_ros1/build /home/caos/sensors_ros1/build/ti_mmwave_rospkg /home/caos/sensors_ros1/build/ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ti_mmwave_rospkg/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
 
