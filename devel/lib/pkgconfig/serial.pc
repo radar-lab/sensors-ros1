@@ -1,8 +1,0 @@
-prefix=/home/caos/sensors_ros1/devel
-
-Name: serial
-Description: Description of serial
-Version: 1.2.1
-Cflags: -I/home/caos/sensors_ros1/src/serial/include
-Libs: -L${prefix}/lib -lserial -lrt -lpthread
-Requires: 
