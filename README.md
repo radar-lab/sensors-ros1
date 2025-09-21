@@ -1,6 +1,6 @@
-# ROS 1 Package for Hesai Lidar, TI mmWave Radar, and USB Camera
+# sensors-ros1
 
-This ROS 1 package allows for simultaneous data visualization and recording of camera, lidar, and radar data for sensor fusion.
+This ROS 1 package allows for simultaneous data visualization and recording of usb camera, Hesai lidar, and TI mmWave radar data for sensor fusion.
 
 This has been tested on ROS 1 Noetic on the Nvidia Jetson Xavier AGX with Hesai Pandar40P and TI AWR1843. This package uses the official Hesai and TI packages for ROS 1.
 
@@ -45,7 +45,7 @@ cd ~/sensors-ros1
 python3 main.py
 ```
 
-### Common Issues
+## Common Issues
 Cannot receive data from lidar: Ensure the host computer and lidar are on the same subnet (e.g. Lidar is 192.168.1.201, computer is 192.168.1.100). Verify this in Wireshark or going to the lidar control webpage at the lidar's IP address
 
 Cannot receive data from radar: Ensure the computer can connect to the radar by using the [demo visualizer](https://dev.ti.com/mmwavedemovisualizer). Give permissions to the ports as shown above and ensure the configuration file and path in the `config.yaml` are valid
