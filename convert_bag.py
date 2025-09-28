@@ -8,6 +8,7 @@ import numpy as np
 import struct
 from tqdm import tqdm
 import cv2
+import json
 
 def convert_lidar(bag, dir):
     '''Convert PointCloud 2 in bag to .pcd files'''
@@ -140,6 +141,107 @@ def convert_camera(bag, dir):
         cv2.imwrite(os.path.join(dir, f'{t}.jpg'), img)
     print()
 
+def synchronize_sensors(camera_files, radar_files, lidar_files, output_file):
+    '''Synchronizes timestamps of sensors with brute force and writes output to json'''
+    # TODO: make this algorithm not O(n^3), use binary search
+    matches = []
+
+    # match a radar and lidar frame to each camera frame
+    if len(camera_files) > 0 and len(camera_files) <= len(radar_files) and len(camera_files) <= len(lidar_files):
+        for camera_file in camera_files:
+            camera_time = int(os.path.splitext(camera_file)[0])
+            
+            # match radar
+            radar_diff = float('inf')
+            closest_radar_file = ''
+            for radar_file in radar_files:
+                radar_time = int(os.path.splitext(radar_file)[0])
+                diff = abs(radar_time - camera_time)
+                if diff < radar_diff:
+                    radar_diff = diff  # Update the difference!
+                    closest_radar_file = radar_file
+
+            # match lidar
+            lidar_diff = float('inf')
+            closest_lidar_file = ''
+            for lidar_file in lidar_files:
+                lidar_time = int(os.path.splitext(lidar_file)[0])
+                diff = abs(lidar_time - camera_time)
+                if diff < lidar_diff:
+                    lidar_diff = diff  # Update the difference!
+                    closest_lidar_file = lidar_file
+
+            matches.append({
+                'camera': camera_file,
+                'lidar': closest_lidar_file,
+                'radar': closest_radar_file
+            })
+
+    # match a camera and lidar frame to each radar frame
+    elif len(radar_files) > 0 and len(radar_files) <= len(camera_files) and len(radar_files) <= len(lidar_files):
+        for radar_file in radar_files:
+            radar_time = int(os.path.splitext(radar_file)[0])
+            
+            # match camera
+            camera_diff = float('inf')
+            closest_camera_file = ''
+            for camera_file in camera_files:
+                camera_time = int(os.path.splitext(camera_file)[0])
+                diff = abs(camera_time - radar_time)
+                if diff < camera_diff:
+                    camera_diff = diff  # Update the difference!
+                    closest_camera_file = camera_file
+
+            # match lidar
+            lidar_diff = float('inf')
+            closest_lidar_file = ''
+            for lidar_file in lidar_files:
+                lidar_time = int(os.path.splitext(lidar_file)[0])
+                diff = abs(lidar_time - radar_time)
+                if diff < lidar_diff:
+                    lidar_diff = diff  # Update the difference!
+                    closest_lidar_file = lidar_file
+
+            matches.append({
+                'camera': closest_camera_file,
+                'lidar': closest_lidar_file,
+                'radar': radar_file
+            })
+
+    # match a camera and radar frame to each lidar frame
+    else:
+        for lidar_file in lidar_files:
+            lidar_time = int(os.path.splitext(lidar_file)[0])
+            
+            # match camera
+            camera_diff = float('inf')
+            closest_camera_file = ''
+            for camera_file in camera_files:
+                camera_time = int(os.path.splitext(camera_file)[0])
+                diff = abs(camera_time - lidar_time)
+                if diff < camera_diff:
+                    camera_diff = diff  # Update the difference!
+                    closest_camera_file = camera_file
+
+            # match radar
+            radar_diff = float('inf')
+            closest_radar_file = ''
+            for radar_file in radar_files:
+                radar_time = int(os.path.splitext(radar_file)[0])
+                diff = abs(radar_time - lidar_time)
+                if diff < radar_diff:
+                    radar_diff = diff  # Update the difference!
+                    closest_radar_file = radar_file
+
+            matches.append({
+                'camera': closest_camera_file,
+                'lidar': lidar_file,
+                'radar': closest_radar_file
+            })
+
+    with open(output_file, 'w') as f:
+        json.dump(matches, f, indent=2)
+
 def main():
     # get input and output paths from cli arguments
     parser = argparse.ArgumentParser()
@@ -163,23 +265,29 @@ def main():
 
     # make output directory if it doesn't exist
     os.makedirs(args.output, exist_ok=True)
+    camera_dir = os.path.join(args.output, 'camera')
+    radar_dir = os.path.join(args.output, 'radar')
+    lidar_dir = os.path.join(args.output, 'lidar')
 
     if has_camera:
-        camera_dir = os.path.join(args.output, 'camera')
         os.makedirs(camera_dir, exist_ok=True)
         convert_camera(bag, camera_dir)
 
     if has_radar:
-        radar_dir = os.path.join(args.output, 'radar')
         os.makedirs(radar_dir, exist_ok=True)
         convert_radar(bag, radar_dir)
 
     if has_lidar:
-        lidar_dir = os.path.join(args.output, 'lidar')
         os.makedirs(lidar_dir, exist_ok=True)
         convert_lidar(bag, lidar_dir)
 
-    print('Successfully finished conversion')
+    # create a json with synchronized sensors
+    camera_files = os.listdir(camera_dir) if os.path.exists(camera_dir) else []
+    radar_files = os.listdir(radar_dir) if os.path.exists(radar_dir) else []
+    lidar_files = os.listdir(lidar_dir) if os.path.exists(lidar_dir) else []
+    synchronize_sensors(camera_files, radar_files, lidar_files, os.path.join(args.output, 'synchronized.json'))
+
+    print('Successfully finished conversion and synchronization')
 
 if __name__ == "__main__":
     main()
