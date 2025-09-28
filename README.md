@@ -1,8 +1,5 @@
 # sensors-ros1
-
-This ROS 1 package allows for simultaneous data visualization and recording of usb camera, Hesai lidar, and TI mmWave radar data for sensor fusion.
-
-This has been tested on ROS 1 Noetic on the Nvidia Jetson Xavier AGX with Hesai Pandar40P and TI AWR1843. This package uses the official Hesai and TI packages for ROS 1.
+ROS 1 package to interface with usb camera, Hesai lidar, and TI mmWave radar sensors, along with utilities to collect, visualize, and process data. This has been tested on ROS 1 Noetic on the Nvidia Jetson Xavier AGX with Hesai Pandar40P and TI AWR1843. We built upon the official Hesai and TI packages for ROS 1.
 
 ## Installation
 Prerequisites: ensure that ROS 1 is installed using official [instructions](https://wiki.ros.org/noetic/Installation/Ubuntu) and `source /opt/ros/[YOUR_ROS_VERSION]/setup.bash` in `~/.bashrc`. We can add this with `nano ~/.bashrc`.
@@ -39,10 +36,15 @@ sudo chmod 666 /dev/ttyACM1
 ## Usage
 To receive data from the sensors, modify `config.yaml` to select which sensors you want to use. We can modify the `.cfg` configuration for the radar and `.csv` angle correction file for the lidar. Modify the `camera_config.yaml` and `camera_calibration.yaml` to adjust the USB camera parameters.
 
-After configuring the `.yaml` files, simply run
+After configuring the `.yaml` files, visualize and collect data (in the form of `.bag` files) with
 ```bash
 cd ~/sensors-ros1
 python3 main.py
+```
+
+Then, to convert the bag files to pcd and jpg files, run the `convert_bag.py` script with
+```bash
+python3 convert_bag.py <path_to_bag_file> <path_to_output_dir>
 ```
 
 ## Common Issues
