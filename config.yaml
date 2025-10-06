@@ -4,11 +4,11 @@ use:
         enabled: true
         config: './camera_config.yaml'
     lidar: 
-        enabled: false
-        correction_csv: './lidar_correction.csv'
+        enabled: true
+        correction_csv: './Pandar40P_correction.csv'
         ip: '192.168.1.201'
     radar: 
-        enabled: false
+        enabled: true
         cfg_file: './radar_config.cfg'
 
 show:
