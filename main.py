@@ -50,7 +50,7 @@ def stop_roslaunch():
 def generate_record_cmd():
     bag_dir = os.path.abspath(config['record']['output_dir'])
     current_time = datetime.now()
-    current_time_str = current_time.strftime("%Y-%m-%d_%H:%M:%S")  # e.g. 2025-09-20_16:21:55
+    current_time_str = current_time.strftime("%Y_%m_%d__%H_%M_%S") # e.g. 2025_09_20__16_21_55
     sensors_str = ''
     topics = []
 
