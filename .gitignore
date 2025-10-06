@@ -3,4 +3,5 @@ build/
 devel/
 logs/
 .catkin_workspace
-
+.DS_STORE
+.vscode/

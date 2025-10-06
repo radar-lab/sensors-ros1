@@ -1,4 +1,4 @@
-# Usage: python3 convert_bag.py clr_2025-09-27_21_57_07.bag ./converted
+# Usage: python3 convert_bag.py ./bags ./converted
 # FIXME: we should use header timestamp instead of time when bag stored the data
 # TODO: add binary capability for pcd
 import rosbag
@@ -19,7 +19,6 @@ def convert_lidar(bag, dir):
         width = msg.width
         height = msg.height
         point_step = msg.point_step
-        row_step = msg.row_step
         
         # Parse field information
         fields = {}
@@ -30,36 +29,34 @@ def convert_lidar(bag, dir):
                 'count': field.count
             }
         
-        # convert pointcloud2 binary to numpy array of bytes
-        data = np.frombuffer(msg.data, dtype=np.uint8)
+        # Convert pointcloud2 binary to numpy array using vectorized operations
         total_points = height * width
-
-        point_data_list = []
-        for i in range(total_points): # TODO: use numpy view() function to vectorize instead of for loop
-            start_idx = i * point_step
-            point_data = data[start_idx:start_idx + point_step] # point_step is how many bytes of data per point
-            
-            # extract x y z, each is float32 (4 bytes)
-            x = struct.unpack('f', point_data[0:4])[0]
-            y = struct.unpack('f', point_data[4:8])[0]
-            z = struct.unpack('f', point_data[8:12])[0]
-            
-            # Extract intensity
-            intensity_offset = fields['intensity']['offset']
-            intensity = struct.unpack('f', point_data[intensity_offset:intensity_offset+4])[0] # float32
-
-            # # Extract timestamp
-            # ts_field = 'timestamp' if 'timestamp' in fields else 't'
-            # ts_offset = fields[ts_field]['offset']
-            # timestamp = struct.unpack('d', point_data[ts_offset:ts_offset+8])[0] # float64
-            
-            # # Extract ring
-            # ring_offset = fields['ring']['offset']            
-            # ring = struct.unpack('H', point_data[ring_offset:ring_offset+2])[0] # uint16
-
-            point_data_list.append([x, y, z, intensity])
         
-        return np.array(point_data_list)
+        # Create a structured dtype based on point_step
+        dt = np.dtype([
+            ('x', np.float32),
+            ('y', np.float32),
+            ('z', np.float32),
+            ('intensity', np.float32)
+        ])
+        
+        # Use numpy's frombuffer with stride to extract data efficiently
+        # This assumes x, y, z are at offsets 0, 4, 8 and intensity at its offset
+        data = np.frombuffer(msg.data, dtype=np.uint8)
+        
+        # Reshape to (num_points, point_step) to process all points at once
+        data_reshaped = data.reshape(total_points, point_step)
+        
+        # Extract x, y, z, intensity using numpy views (vectorized)
+        x = data_reshaped[:, 0:4].view(np.float32).flatten()
+        y = data_reshaped[:, 4:8].view(np.float32).flatten()
+        z = data_reshaped[:, 8:12].view(np.float32).flatten()
+        
+        intensity_offset = fields['intensity']['offset']
+        intensity = data_reshaped[:, intensity_offset:intensity_offset+4].view(np.float32).flatten()
+        
+        # Stack into final array
+        return np.column_stack((x, y, z, intensity))
 
     # write numpy array to PCD file
     def arr_to_pcd(filename, arr):
@@ -77,8 +74,8 @@ DATA ascii
 '''
         with open(filename, 'w') as f:
             f.write(header)
-            for point in arr:
-                np.savetxt(f, [point])
+            # write each point to txt
+            np.savetxt(f, arr, fmt='%.6f')
 
     # save every frame as a new pcd file
     print('Converting lidar...')
@@ -136,9 +133,9 @@ def convert_camera(bag, dir):
     print('Converting camera...')
     num_messages = bag.get_type_and_topic_info().topics['/usb_cam/image_raw/compressed'].message_count
     for topic, message, t in tqdm(bag.read_messages(topics=['/usb_cam/image_raw/compressed']), total=num_messages):
-        # message.data is the raw jpeg bytes, convert it to cv2 image
-        img = cv2.imdecode(np.frombuffer(message.data, np.uint8), cv2.IMREAD_COLOR)
-        cv2.imwrite(os.path.join(dir, f'{t}.jpg'), img)
+        # write jpg
+        with open(os.path.join(dir, f'{t.to_nsec()}.jpg'), 'wb') as f:
+            f.write(message.data)
     print()
 
 def synchronize_sensors(camera_files, radar_files, lidar_files, output_file):
@@ -245,49 +242,58 @@ def synchronize_sensors(camera_files, radar_files, lidar_files, output_file):
 def main():
     # get input and output paths from cli arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('bag', help='Bag file path')
+    parser.add_argument('bag', help='Bag directory path')
     parser.add_argument('output', help='Output directory path')
     args = parser.parse_args()
 
-    # check if bag file exists
-    if not os.path.isfile(args.bag):
-        print('Error: bag file does not exist')
+    # check if bag directory exists
+    if not os.path.isdir(args.bag):
+        print('Error: bag directory does not exist')
         return
+    
+    # loop through every bag in directory and convert
+    for filename in tqdm(os.listdir(args.bag)):
+        print(filename)
+        if os.path.splitext(filename)[1] != '.bag':
+            continue
+        
+        full_filename = os.path.join(args.bag, filename)
 
-    bag = rosbag.Bag(args.bag)
-    print(f'\nBag info:\n{bag}\n')
+        bag = rosbag.Bag(full_filename)
+        print(f'\nBag info:\n{bag}\n')
 
-    # get topics from bag to see what we can convert
-    topics = bag.get_type_and_topic_info().topics.keys()
-    has_camera = '/usb_cam/image_raw/compressed' in topics # FIXME: process raw too
-    has_lidar = '/hesai/pandar' in topics
-    has_radar = '/ti_mmwave/radar_scan' in topics
+        # get topics from bag to see what we can convert
+        topics = bag.get_type_and_topic_info().topics.keys()
+        has_camera = '/usb_cam/image_raw/compressed' in topics # FIXME: process raw too
+        has_lidar = '/hesai/pandar' in topics
+        has_radar = '/ti_mmwave/radar_scan' in topics
 
-    # make output directory if it doesn't exist
-    os.makedirs(args.output, exist_ok=True)
-    camera_dir = os.path.join(args.output, 'camera')
-    radar_dir = os.path.join(args.output, 'radar')
-    lidar_dir = os.path.join(args.output, 'lidar')
+        # make output directory with bag name if it doesn't exist
+        output_dir = os.path.join(args.output, os.path.splitext(filename)[0])
+        os.makedirs(output_dir, exist_ok=True)
+        camera_dir = os.path.join(output_dir, 'camera')
+        radar_dir = os.path.join(output_dir, 'radar')
+        lidar_dir = os.path.join(output_dir, 'lidar')
 
-    if has_camera:
-        os.makedirs(camera_dir, exist_ok=True)
-        convert_camera(bag, camera_dir)
+        if has_camera:
+            os.makedirs(camera_dir, exist_ok=True)
+            convert_camera(bag, camera_dir)
 
-    if has_radar:
-        os.makedirs(radar_dir, exist_ok=True)
-        convert_radar(bag, radar_dir)
+        if has_radar:
+            os.makedirs(radar_dir, exist_ok=True)
+            convert_radar(bag, radar_dir)
 
-    if has_lidar:
-        os.makedirs(lidar_dir, exist_ok=True)
-        convert_lidar(bag, lidar_dir)
+        if has_lidar:
+            os.makedirs(lidar_dir, exist_ok=True)
+            convert_lidar(bag, lidar_dir)
 
-    # create a json with synchronized sensors
-    camera_files = os.listdir(camera_dir) if os.path.exists(camera_dir) else []
-    radar_files = os.listdir(radar_dir) if os.path.exists(radar_dir) else []
-    lidar_files = os.listdir(lidar_dir) if os.path.exists(lidar_dir) else []
-    synchronize_sensors(camera_files, radar_files, lidar_files, os.path.join(args.output, 'synchronized.json'))
+        # create a json with synchronized sensors
+        camera_files = os.listdir(camera_dir) if os.path.exists(camera_dir) else []
+        radar_files = os.listdir(radar_dir) if os.path.exists(radar_dir) else []
+        lidar_files = os.listdir(lidar_dir) if os.path.exists(lidar_dir) else []
+        synchronize_sensors(camera_files, radar_files, lidar_files, os.path.join(output_dir, 'synchronized.json'))
 
-    print('Successfully finished conversion and synchronization')
+        print('Successfully finished conversion and synchronization')
 
 if __name__ == "__main__":
     main()
